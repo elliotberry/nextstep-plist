@@ -1,24 +1,21 @@
 #!/usr/bin/env node
-let parse = require("./code/parse")
-let stringify = require("./code/stringify")
+import parse from "./lib/parse.js";
+import stringify from "./lib/stringify.js";
 
-module.exports = {
-	parse,
-	stringify,
-}
+
 
 async function getStdin() {
 	return new Promise((honour, betray) => {
 		let result = ""
 
-		process.stdin.on("data", function(chunk) {
+		process.stdin.on("data", chunk => {
 			result += chunk
 		})
 
 		process.stdin.on("end", () => honour(result))
 
 		process.stdin.on("error", betray)
-	})
+	});
 }
 
 let help = `
@@ -52,3 +49,8 @@ commands:
 })().catch(error => {
   console.error(process.env.debug ? error : error.message)
 })
+
+export {
+	parse,
+	stringify,
+};

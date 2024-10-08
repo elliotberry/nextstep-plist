@@ -1,20 +1,38 @@
 {
   "name": "nextstep-plist",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "NeXTSTEP plist parser",
-  "main": "index.js",
-  "bin": "index.js",
-  "repository": "git@github.com:chee/nextstep-plist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git@github.com:chee/nextstep-plist"
+  },
+  "license": "GPL-3.0",
   "author": "chee <yay@chee.party>",
   "contributors": [
-    "makepost <makepost@firemail.cc>"
+    "makepost <makepost@firemail.cc>",
+    "Elliot <elliot@email.gd>"
   ],
-  "license": "GPL-3.0",
+  "type": "module",
+  "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "test": "tape tests.js | faucet"
+    "test": "node index.test.js"
   },
   "devDependencies": {
-    "faucet": "^0.0.1",
-    "tape": "^4.6.3"
+    "@eslint/js": "^9.12.0",
+    "@release-it/bumper": "^6.0.1",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-no-secrets": "^1.0.2",
+    "eslint-plugin-package-json": "^0.15.3",
+    "eslint-plugin-perfectionist": "^3.8.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sonarjs": "^2.0.3",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "prettier": "^3.3.3",
+    "release-it": "^17.7.0"
   }
 }
